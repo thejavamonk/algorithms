@@ -13,13 +13,13 @@ public class BinarySearch {
 			mid = (first + last) / 2;
 			
 			if(searchValue < a[mid]){
-				last = mid - 1;
+				last = mid - 1;			// search in the left half of the array
 			}
 			else if (searchValue > a[mid]){
-				first = mid + 1;
+				first = mid + 1;		// search in the right half of the array
 			}
 			else{
-				return mid;
+				return mid;				// search value present at the middle index
 			}
 		}
 		return -1;
