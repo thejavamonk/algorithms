@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>com.codeprep</groupId>
-        <artifactId>algorithms-parent</artifactId>
+        <artifactId>algorithms</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 

@@ -1,153 +1,98 @@
-# Algorithms - Multi-Module Maven Project
+# Algorithms
 
-Implementation of basic algorithms in Java organized as a multi-module Maven project.
+A collection of fundamental algorithms and data structures implemented in Java.
 
-## Project Structure
+## Project Overview
 
-This is a Maven multi-module project with the following structure:
+This project contains implementations of various algorithms commonly used in computer science and software development. Each algorithm is organized in its own module for clarity and ease of study.
 
-```
-algorithms-parent (root)
-├── binarySearch
-├── bubbleSort
-├── linearSearch
-├── mergeSort
-├── quickSort
-├── recursion
-└── selectionSort
-```
-
-## Modules
+## Implemented Algorithms
 
 ### 1. Binary Search
-Implementation of binary search algorithm for sorted arrays.
-- **Main Class**: `com.codeprep.binarysearch.BinarySearch`
+Implementation of the binary search algorithm for efficiently finding elements in sorted arrays.
+
+**Key Features:**
+- Efficient O(log n) time complexity
+- Works on sorted arrays
+- Demonstrates divide-and-conquer approach
 
 ### 2. Bubble Sort
-Implementation of bubble sort algorithm.
-- **Main Class**: `com.codeprep.bubblesort.BubbleSort`
+Implementation of the bubble sort algorithm, a simple comparison-based sorting algorithm.
+
+**Key Features:**
+- Simple and intuitive sorting method
+- O(n²) time complexity
+- In-place sorting algorithm
 
 ### 3. Linear Search
-Multiple implementations of linear search algorithms:
+Multiple implementations of linear search algorithms for finding elements in arrays.
+
+**Variants:**
 - Basic linear search
 - Linear search with sentinel
 - Linear search on sorted arrays
-- **Main Class**: `com.codeprep.linearsearch.LinearSearch`
+
+**Key Features:**
+- O(n) time complexity
+- Works on both sorted and unsorted arrays
+- Simple and straightforward implementation
 
 ### 4. Merge Sort
-Implementations of merge sort algorithm:
+Implementations of the merge sort algorithm using different approaches.
+
+**Variants:**
 - Recursive merge sort
 - Iterative merge sort
 - Merging sorted arrays
-- **Main Class**: `com.codeprep.mergesort.recursive.MergeSortRecursive`
+
+**Key Features:**
+- Efficient O(n log n) time complexity
+- Stable sorting algorithm
+- Divide-and-conquer strategy
 
 ### 5. Quick Sort
-Implementation of quick sort algorithm.
-- **Main Class**: `com.codeprep.quicksort.Solution`
+Implementation of the quick sort algorithm, one of the most efficient sorting algorithms.
+
+**Key Features:**
+- Average O(n log n) time complexity
+- In-place sorting (low space complexity)
+- Widely used in practice
 
 ### 6. Recursion
-Examples of recursion:
-- Factorial using recursion
-- Printing numbers 1 to N
-- Sum of digits
-- **Main Class**: `com.codeprep.factorial.FactorialUsingRecursion`
+Examples demonstrating recursive programming techniques.
+
+**Examples:**
+- Factorial calculation using recursion
+- Printing numbers from 1 to N
+- Sum of digits calculation
+
+**Key Features:**
+- Demonstrates recursive problem-solving
+- Base case and recursive case patterns
+- Stack-based execution flow
 
 ### 7. Selection Sort
-Implementation of selection sort algorithm.
-- **Main Class**: `com.codeprep.selectionsort.SelectionSort`
+Implementation of the selection sort algorithm.
 
-## Building the Project
+**Key Features:**
+- Simple sorting algorithm
+- O(n²) time complexity
+- In-place sorting with minimal swaps
 
-### Build All Modules
-```bash
-mvn clean install
+## Project Structure
+
+```
+algorithms/
+├── binarySearch/
+├── bubbleSort/
+├── linearSearch/
+├── mergeSort/
+├── quickSort/
+├── recursion/
+└── selectionSort/
 ```
 
-### Build a Specific Module
-```bash
-mvn clean install -pl <module-name>
-```
-
-For example:
-```bash
-mvn clean install -pl binarySearch
-```
-
-### Compile All Modules
-```bash
-mvn clean compile
-```
-
-## Running the Algorithms
-
-### Using Maven Exec Plugin
-
-To run a specific module's main class:
-
-```bash
-mvn exec:java -pl <module-name>
-```
-
-Examples:
-
-**Binary Search:**
-```bash
-mvn exec:java -pl binarySearch
-```
-
-**Quick Sort:**
-```bash
-mvn exec:java -pl quickSort
-```
-
-**Merge Sort (Recursive):**
-```bash
-mvn exec:java -pl mergeSort
-```
-
-### Using Java Command
-
-After building, you can run compiled classes directly:
-
-```bash
-java -cp <module-name>/target/classes com.codeprep.<package>.<MainClass>
-```
-
-Example:
-```bash
-java -cp binarySearch/target/classes com.codeprep.binarysearch.BinarySearch
-```
-
-## Maven Coordinates
-
-- **Group ID**: `com.codeprep`
-- **Parent Artifact ID**: `algorithms-parent`
-- **Version**: `1.0.0-SNAPSHOT`
-
-## Requirements
-
-- Java 11 or higher
-- Maven 3.6 or higher
-
-## Project Properties
-
-- **Source Encoding**: UTF-8
-- **Java Version**: 11
-- **Maven Compiler Source**: 11
-- **Maven Compiler Target**: 11
-
-## Module Dependencies
-
-Each module is independent and can be built/run separately. There are no inter-module dependencies.
-
-## Contributing
-
-When adding new algorithm implementations:
-1. Create a new module directory
-2. Add the module to the parent `pom.xml` in the `<modules>` section
-3. Create a `pom.xml` for the new module with proper parent reference
-4. Follow the standard Maven directory structure: `src/main/java`
-5. Configure the exec-maven-plugin with the main class if the module is executable
+Each module contains its own implementation and can be studied independently.
 
 ## License
 
